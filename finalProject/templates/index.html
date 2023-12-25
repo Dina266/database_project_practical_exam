@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SuperMarket</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+
+                <!-- Search Form in Navbar -->
+                <form action="/submit_search" method="get" class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        name="searchName">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>SuperMarket</h1>
+
+        <!-- Add Customer Form -->
+        <h2>Add Customer</h2>
+        <form action="/submit_newProduct" method="post">
+
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" required>
+
+            <label for="State">State:</label>
+            <input type="text" id="State" name="State" class="form-control" required>
+
+            <label for="City">City:</label>
+            <input type="text" id="City" name="City" class="form-control" required>
+
+            <label for="Street">Street:</label>
+            <input type="text" id="Street" name="Street" class="form-control" required>
+
+
+            <button type="submit" class="btn btn-primary">Add Customer</button>
+        </form>
+
+        <!-- Search Form -->
+        <h2>Search</h2>
+        <form action="/submit_search" method="get">
+            <label for="searchName">Search by Name:</label>
+            <input type="text" id="searchName" name="searchName" class="form-control" required>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <!-- Delete Form -->
+        <h2>Delete</h2>
+        <form action="/submit_delete" method="post">
+            <label for="deleteCustomerName">Customer Name to Delete:</label>
+            <input type="text" id="deleteCustomerName" name="deleteCustomerName" class="form-control" required>
+            <button type="submit" class="btn btn-danger">Delete Customer</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-e4e4L7FmXH4PJNl+kD1U2KOaxZBDL/8Dl9ivb6agKoZm0uH79p3o8fmR5HpjyCE1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

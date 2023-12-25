@@ -1,0 +1,80 @@
+* {
+    margin: 1opx;
+}
+
+body {
+    background-color: bisque;
+}
+
+.carousel {
+    margin: 50px;
+    width: 800px;
+    height: 200px;
+    margin-left: 100px;
+}
+
+.carousel img {
+    width: 800px;
+    height: 200px;
+}
+
+.container {
+    margin-left: 120px;
+    margin-top: 40px;
+    background-color: #b2b3f1;
+    width: 1000px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 400px;
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-gap: 30px 10px;
+    /*justify-items: center;*/
+    /*align-items: center;*/
+
+}
+
+.child {
+    background-color: aqua;
+}
+
+.child1 {
+    background-image: url(./p2.jpg);
+    background-size: contain;
+}
+
+.child2 {
+    background-image: url(./p3.jpg);
+    background-size: contain;
+}
+
+.child3 {
+    background-image: url(./p5.jpg);
+    background-size: contain;
+}
+
+.child4 {
+    background-image: url(./p6.jpg);
+    background-size: contain;
+}
+
+.child5 {
+    background-image: url(./p11.jpg);
+    background-size: contain;
+}
+
+.child6 {
+    background-image: url(./p9.jpg);
+    background-size: contain;
+}
+
+.child7 {
+    background-image: url(./p7.jpg);
+    background-size: contain;
+}
+
+.child8 {
+    background-image: url(./p10.webp);
+    background-size: contain;
+}
